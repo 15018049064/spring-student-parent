@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    <bean id="dbconfig" class="basic.DbConfig">-->
+<!--        <constructor-arg name="password" value="pwd"></constructor-arg>-->
+<!--        <constructor-arg name="url" value="url"></constructor-arg>-->
+<!--        <constructor-arg name="username" value="root"></constructor-arg>-->
+<!--        <property name="dri
+verclassname" value="dirver">-->
+<!--        </property>-->
+<!--    </bean>-->
+
+<!--    基本类型-->
+<!--    <bean id="addr" class="basic.UserInfo">-->
+<!--        <property name="string" value="111"></property>-->
+<!--     </bean>-->
+
+<!--    对象测试-->
+    <bean id="Dbcon" class="basic.DbConfig"></bean>
+
+    <bean id="addr" class="basic.UserInfo">
+
+        <property name="string" value="666"></property>
+       <property name="dbConfig">
+           <bean class="basic.DbConfig" >
+               <property name="driverclassname" value="dricer"></property>
+               <property name="password" value="pwd"></property>
+               <property name="url" value="url"></property>
+               <property name="username" value="name"></property>
+           </bean>
+       </property>
+
+
+
+        <property name="map" >
+            <map>
+                <entry key="wu" value="100"></entry>
+                <entry key="ping" value="100"></entry>
+                <entry key="jia" value="100"></entry>
+            </map>
+        </property>
+
+        <property name="set">
+            <set>
+                <value>wu</value>
+                <value>ping</value>
+                <value>jiao</value>
+                <value>jiao</value>
+            </set>
+        </property>
+
+        <property name="properties">
+            <props>
+                <prop key="java">1</prop>
+                <prop key="c#">2</prop>
+            </props>
+        </property>
+
+        <!--        带一下常用类型-->
+        <!--        <property name="list">-->
+        <!--            <list>-->
+        <!--                <value>wu</value>-->
+        <!--                <value>ping</value>-->
+        <!--                <value>jiao</value>-->
+        <!--            </list>-->
+        <!--        </property>-->
+
+<!--        带对象参数-->
+        <property name="list" >
+            <list>
+                <ref bean="Dbcon"/>
+<!--                <bean class="basic.DbConfig">-->
+<!--                    <property name="username" value="w"></property>-->
+<!--                    <property name="url" value="r"/>-->
+<!--                    <property name="password" value="rr"></property>-->
+<!--                    <property name="driverclassname" value="www"></property>-->
+<!--                </bean>-->
+            </list>
+        </property>
+    </bean>
+
+
+
+</beans>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-jdbc-matter-aop" />
+        <module name="ch15-mvc-fileupload-interception-task" />
+        <module name="spring-ch03-autowire" />
+        <module name="ch12-mvc-receive-data" />
+        <module name="spring-ch05-util" />
+        <module name="ch02-spring-ioc" />
+        <module name="spring-ch01-container" />
+        <module name="ch13-mvc-validation" />
+        <module name="ch17-mvc-code" />
+        <module name="ch014-mvc-view" />
+        <module name="ch16-servlet3.0" />
+        <module name="ch10-mvc-helloword" />
+        <module name="ch09-code-mybatis-spring" />
+        <module name="spring-ch04-tx" />
+        <module name="ch6-annotation-container-ioc-aop" />
+        <module name="ch11-mvc-request-mapper" />
+        <module name="spring-ch04-tx2" />
+        <module name="ch15-mvc-fileupload" />
+        <module name="ch07-aop-tx" />
+        <module name="spring-mvc-interception" />
+        <module name="ch08-code-cotainer-tx" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

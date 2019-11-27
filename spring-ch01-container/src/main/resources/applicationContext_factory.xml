@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    静态创建-->
+<!--    <bean id="factory" class="factory.FactoryNoe" factory-method="getFactory">-->
+<!--    </bean>-->
+<!--    实例创建-->
+    <bean id="factory2" class="factory.FactoryNoe"></bean>
+    <bean id="factory3" factory-bean="factory2" factory-method="getFactory2"></bean>
+
+<!--    <bean id="factory" class="factory.FactoryTwo" ></bean>-->
+
+</beans>

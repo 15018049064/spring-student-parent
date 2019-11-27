@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="url" value="jdbc:mysql://localhost:3306/demo"/>
+        <property name="username" value="root"/>
+        <property name="password" value="root"/>
+    </bean>
+
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+           <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id="baseDao" abstract="true">
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
+    </bean>
+
+    <bean id="deptDao" class="com.dao.impl.DeptDaoImpl" parent="baseDao"/>
+
+    <bean id="employeeDao" class="com.dao.impl.EmployeeDaoImpl" parent="baseDao"/>
+
+    <bean id="employeeService" class="com.service.impl.EmployeeServiceImpl">
+        <property name="deptDao" ref="deptDao"/>
+        <property name="employeeDao" ref="employeeDao"/>
+    </bean>
+
+<!--    配置事务管理器-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+<!--    配置事务通知-->
+    <tx:advice id="txAdvice" >
+        <tx:attributes>
+            <tx:method name="deleteDeptById"/>
+        </tx:attributes>
+    </tx:advice>
+
+<!--    aop配置-->
+    <aop:config>
+        <aop:pointcut id="txPointcut" expression="execution(* com.service..*.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>
+    </aop:config>
+
+
+
+</beans>

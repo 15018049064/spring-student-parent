@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch014-mvc-view" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch02-spring-ioc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch07-aop-tx" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch08-code-cotainer-tx" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch09-code-mybatis-spring" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch10-mvc-helloword" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch11-mvc-request-mapper" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch12-mvc-receive-data" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch13-mvc-validation" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch15-mvc-fileupload" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch15-mvc-fileupload-interception-task" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch16-servlet3.0" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch17-mvc-code" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ch6-annotation-container-ioc-aop" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-ch01-container" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-ch03-autowire" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-ch04-tx" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-ch04-tx2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-ch05-util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-jdbc-matter-aop" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-mvc-interception" charset="UTF-8" />
+  </component>
+</project>
