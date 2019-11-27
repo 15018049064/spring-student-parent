@@ -1,5 +1,6 @@
 package basic;
 
+//实体类
 public class DbConfig {
 
     private String url;
